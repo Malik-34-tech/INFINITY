@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Downloader</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #0b0f19;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 26px;
+            color: #00f2fe;
+            margin-top: 10px;
+            font-weight: 700;
+        }
+        .logo-icon {
+            font-size: 40px;
+        }
+        .input-card {
+            background: rgba(25, 33, 56, 0.7);
+            border: 1px solid rgba(0, 242, 254, 0.3);
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        .input-card label {
+            font-size: 14px;
+            color: #94a3b8;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .input-box {
+            display: flex;
+            gap: 10px;
+        }
+        .input-box input {
+            flex: 1;
+            background: #0b0f19;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 12px;
+            color: #fff;
+            font-size: 14px;
+            outline: none;
+        }
+        .input-box input:focus {
+            border-color: #00f2fe;
+        }
+        .paste-btn {
+            background: #00f2fe;
+            color: #0b0f19;
+            border: none;
+            padding: 0 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .section-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #e2e8f0;
+        }
+        .quality-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .quality-card {
+            background: rgba(25, 33, 56, 0.7);
+            border: 1px solid #1e293b;
+            border-radius: 12px;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.3s;
+        }
+        .quality-card.active {
+            border-color: #00f2fe;
+            background: rgba(0, 242, 254, 0.05);
+        }
+        .q-info h3 {
+            font-size: 16px;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .q-info p {
+            font-size: 12px;
+            color: #94a3b8;
+        }
+        .q-badge {
+            background: #1e293b;
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            color: #00f2fe;
+            font-weight: bold;
+        }
+        .download-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            color: #0b0f19;
+            border: none;
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.4);
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .audio-link {
+            text-align: center;
+            color: #00f2fe;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: underline;
+            margin-bottom: 30px;
+        }
+        .footer-nav {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-around;
+            background: #131b2e;
+            padding: 12px;
+            border-radius: 15px;
+            border: 1px solid #1e293b;
+        }
+        .nav-item {
+            text-align: center;
+            color: #64748b;
+            font-size: 11px;
+        }
+        .nav-item.active {
+            color: #00f2fe;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo-icon">♾️</div>
+        <h1>Infinity Downloader</h1>
+    </div>
+
+    <div class="input-card">
+        <label>Paste Video URL Here...</label>
+        <div class="input-box">
+            <input type="text" placeholder="https://youtube.com/...">
+            <button class="paste-btn">Paste</button>
+        </div>
+    </div>
+
+    <h2 class="section-title">Select Video Quality</h2>
+
+    <div class="quality-grid">
+        <div class="quality-card active">
+            <div class="q-info">
+                <h3>4K UHD</h3>
+                <p>78 MB • 3840x2160 • 60fps</p>
+            </div>
+            <div class="q-badge">MP4</div>
+        </div>
+
+        <div class="quality-card">
+            <div class="q-info">
+                <h3>1080p HD</h3>
+                <p>42 MB • 1920x1080</p>
+            </div>
+            <div class="q-badge">MP4</div>
+        </div>
+
+        <div class="quality-card">
+            <div class="q-info">
+                <h3>720p HD</h3>
+                <p>24 MB • 1280x720</p>
+            </div>
+            <div class="q-badge">MP4</div>
+        </div>
+    </div>
+
+    <button class="download-btn">DOWNLOAD NOW ➔</button>
+    <div class="audio-link">Convert to Audio (MP3)</div>
+
+    <div class="footer-nav">
+        <div class="nav-item active">🏠<br>Home</div>
+        <div class="nav-item">⬇️<br>Downloads</div>
+        <div class="nav-item">🕒<br>History</div>
+        <div class="nav-item">⚙️<br>Settings</div>
+    </div>
+
+</body>
+</html>
