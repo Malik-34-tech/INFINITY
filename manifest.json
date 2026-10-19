@@ -1,9 +1,15 @@
 {
-  "name": "Infinity",
-  "short_name": "Infinity",
-  "start_url": "/INFINITY/",
+  "background_color": "#ffffff",
+  "dir": "ltr",
   "display": "standalone",
-  "background_color": "#0b0f19",
-  "theme_color": "#00f2fe",
-  "icons": []
+  "name": "malik-34-tech.github",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "malik-34-tech.github",
+  "start_url": "https://malik-34-tech.github.io/INFINITY",
+  "theme_color": "#ffffff",
+  "id": "com.malik.infinity",
+  "categories": [
+    "developer tools"
+  ]
 }
